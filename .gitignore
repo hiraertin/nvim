@@ -1,4 +1,8 @@
-# Git Ignore
+
+# .Gitignore for Neovim
 
 # Ignore everything in /pack
 pack/
+
+# Ignore the Neovim AppImage
+nvim.appimage
