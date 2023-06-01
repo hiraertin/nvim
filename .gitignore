@@ -1,0 +1,4 @@
+# Git Ignore
+
+# Ignore everything in /pack
+/pack/*
