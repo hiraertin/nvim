@@ -12,3 +12,8 @@ vim.api.nvim_exec(
   [[
   autocmd VimEnter * TagbarToggle
   ]], true)
+
+-- setup mason
+require("mason").setup()
+require('lualine').get_config()
+require('lualine').setup()

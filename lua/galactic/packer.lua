@@ -24,7 +24,6 @@ use('ThePrimeagen/harpoon') -- :Harpoon cuz sexy
 use('mbbill/undotree') -- :UndotreeToggle
 use('tpope/vim-fugitive') -- Git
 use('github/copilot.vim') -- Copilot
-use('vim-airline/vim-airline') -- Status bar
 use('tpope/vim-surround') -- cs"' to change surrounding " to ' and vice versa
 use('tpope/vim-commentary') -- gc{motion} to comment out
 use('rafi/awesome-vim-colorschemes') -- :colorscheme <tab> to cycle through
@@ -34,6 +33,12 @@ use('terryma/vim-multiple-cursors') -- <C-n> to select next word
 use('preservim/nerdtree') -- :NERDTreeToggle
 use('preservim/tagbar') -- :TagbarToggle
 use('preservim/nerdcommenter') -- :NERDCommenterToggle
+use {
+    "williamboman/mason.nvim",
+    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+}
+
+use ('airblade/vim-gitgutter') -- Git gutter
 
 use {
   'VonHeikemen/lsp-zero.nvim',
@@ -54,6 +59,19 @@ use {
     {'hrsh7th/cmp-nvim-lsp'}, -- Required
     {'L3MON4D3/LuaSnip'},     -- Required
   }
+}
+
+use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+}
+
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
 
 end)
